@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
-
+//Server side handler for POST request/ Interacts with OpenAI API to generate responses
+//Based on user prompts and conversation history.
 export const dynamic = 'force-dynamic';
 
 export const POST = async (req) => {

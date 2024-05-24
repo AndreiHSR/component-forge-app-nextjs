@@ -23,35 +23,6 @@ const ComponentCard = ({ item, setComponents }) => {
       console.error('Error:', error);
     }
   };
-
-  const editComponent = async (limit) => {
-    try {
-      const response = await fetch(`/api/saved-components/${id}`, {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          userId,
-          title,
-          output,
-          conversationHistory,
-        }),
-      });
-      if (response.ok) {
-        const data = await response.json();
-        setCustomerData((prev) => {
-          return {
-            ...prev,
-            user: data.user,
-          };
-        });
-      }
-    } catch (error) {
-      console.log('error', error);
-    }
-  };
-
   return (
     <div className="relative">
       <TrashIcon

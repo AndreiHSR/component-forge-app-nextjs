@@ -112,7 +112,7 @@ const Editor = ({ edit, userId }) => {
     }
   };
 
-  console.log('conversationHistory', conversationHistory);
+  //console.log('conversationHistory', conversationHistory);
 
   return (
     userId && (
@@ -122,7 +122,7 @@ const Editor = ({ edit, userId }) => {
             htmlFor="language"
             className="block text-sm font-medium leading-6 text-gray-900"
           >
-            Select Css
+            Select Language
           </label>
           <select
             id="language"
@@ -172,11 +172,6 @@ const Editor = ({ edit, userId }) => {
             )}
           </div>
           <div className="col-span-1 border border-black min-h-[520px] rounded-md flex flex-col justify-start items-center p-3">
-            {/* {HTMLReactParser(output, {
-            replace: (node) => {
-              return node;
-            },
-          })} */}
             {HTMLReactParser(output)}
           </div>
         </div>

@@ -2,7 +2,6 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog, Disclosure } from "@headlessui/react";
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import authUser from "./authUser";
 import { UserButton } from "@clerk/nextjs";
@@ -33,13 +32,6 @@ export default function NavBar() {
       <nav className="flex items-center justify-between px-6 py-4 lg:px-8">
         <div className="flex lg:flex-1 ml-14 ">
           <Link href="/">
-            {/* <Image className="h-8 w-auto"
-              src="LogoForge.svg"
-              alt="The Logo of Compoenents Forge"
-              width={900} // Original width
-              height={450} // Original height
-              priority
-            /> */}
                 <img className="h-[40px]" src="/LogoForge.png" alt="The Logo of Compoenents Forge" />
           </Link>
         </div>
